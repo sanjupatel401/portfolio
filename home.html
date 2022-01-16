@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div id="menubar">=</div>
+    <div id="menubar"><i class="fa fa-bars"></i></div>
     <header>
         <nav>
             <a href="#home">HOME</a>
@@ -45,8 +45,8 @@
             <div class="image tilt" data-tilt><img class="aboutimg"  src="images/IMG_20220112_153649.jpg" alt=""></div>
 
             <div class="details">
-                <h1>my name prabhu patel</h1>
-                <p>i am website developer. i have 2 year experience.........</p>
+                <h1>My name is prabhu patel</h1>
+                <p>i am web developer i have 2 years experience in this field i can create dynamic and static website for your business</p>
 
                 <div class="box">
                     <div class="info">
@@ -58,7 +58,7 @@
                     <div class="info">
                         <p>education: <span>BCA</span></p>
                         <p>experience: <span>2 years</span></p>
-                        <p>hobby: <span>codding, pubg</span></p>
+                        <p>hobby: <span>coding, pubg</span></p>
                         <p>email: <span>prabhupatel884@gmail.com</span></p>
                     </div>
                 </div>
@@ -116,23 +116,16 @@
                 </div>
             </div>
             <div class="procount">
-                .
+                
                 <div class="box tilt" data-tilt>
-                    <h1>>>2+</h1>
+                    <h1>2+</h1>
                     <span>experience of year</span>
                 </div>
                 <div class="box tilt" data-tilt>
-                    <h1>>>2</h1>
+                    <h1>1+</h1>
                     <span>project</span>
                 </div>
-                <div class="box tilt" data-tilt>
-                    <h1>>>0</h1>
-                    <span>Happy client</span>
-                </div>
-                <div class="box tilt" data-tilt>
-                    <h1>>>0</h1>
-                    <span>awards won</span>
-                </div>
+              
             </div>
         </div>
 
@@ -217,9 +210,29 @@
         let menu = document.querySelector('#menubar')
         let header = document.querySelector('header')
 
-        menu.addEventListener('click', () => {
+        menu.addEventListener('click',() => {
             header.classList.toggle('active')
-        })
+            menu.classList.toggle('fa-times')
+
+        })  
+        window.onscroll = () => {
+            menu.classList.remove('fa-times')
+            var x = window.matchMedia("(max-width: 485px)")
+            if (x.matches) {
+                header.style.display = 'none'
+              } else {
+                header.style.display = 'block'
+              }
+            var x = window.matchMedia("(max-width: 768px)")
+            if (x.matches) {
+                header.style.display = 'none'
+              } else {
+                header.style.display = 'block'
+              }
+            
+        }
+
+
 
         // typedjs
         var type = new Typed('.changetext', {
