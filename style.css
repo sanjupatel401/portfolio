@@ -183,11 +183,13 @@ header nav a:hover{
 .about .details h1{
     font-size: 3rem;
     color: #24ae60;
+    text-transform: none;
 }
 
 .about .details p{
     width: 80%;
     font-size: 2rem;
+    text-transform: lowercase ;
 }
 .about .details .box{
     width: 80%;
@@ -609,6 +611,7 @@ footer  .information a{
     }
     .about .details p{
         font-size: 1.6rem;
+        text-transform: lowercase !important; 
     }
 
     .about .details .box .info {
@@ -622,6 +625,7 @@ footer  .information a{
         display: block;
         word-wrap: break-word;
         margin: .3rem;
+        
     }
 
     .about .row .image{
@@ -632,7 +636,7 @@ footer  .information a{
     }
 
     .project{
-       margin-top: 25rem;
+       margin-top: 1rem;
         padding: 1.5rem;
     }
 
