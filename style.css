@@ -35,12 +35,14 @@ body,html{
     margin-top: 1rem;
     font-size: 1.5rem;
     transition: all .2s;
+    
 
 }
 
 .btn:hover,.btn:active{
     padding: .9rem 7%;
     background: rgb(61, 60, 60);
+    cursor:pointer;
 }
 
 #menubar{
