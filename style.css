@@ -35,14 +35,12 @@ body,html{
     margin-top: 1rem;
     font-size: 1.5rem;
     transition: all .2s;
-    
 
 }
 
 .btn:hover,.btn:active{
-    padding: .9rem 7%;
-    background: rgb(61, 60, 60);
-    cursor:pointer;
+    background: rgb(15, 14, 14);
+    border-radius: .5rem;
 }
 
 #menubar{
@@ -67,34 +65,6 @@ body,html{
     color: #24ae60;
 }
 
-header{
-    position: fixed;
-    top: 0;
-    right: 0;
-    font-size: 1.5rem;
-    text-decoration: none; 
-    padding: .8rem;
-    background: #fff;
-    z-index: 999;
-}
-
-header nav{
-    
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    writing-mode: vertical-lr;
-}
-
-header nav a{
-    color:#24ae60;
-
-}
-
-header nav a:hover{
-    color: #000;
-}
 
 .home{
     display: flex;
@@ -102,6 +72,7 @@ header nav a:hover{
     justify-content: center;
     background:url('images/photo-1531685250784-7569952593d2.jpg');
     background-position: center;
+    
     background-size: cover;
     height: 100vh;
      
@@ -113,12 +84,15 @@ header nav a:hover{
     flex-direction: column;
     display: flex;
     justify-content: center;
+    backdrop-filter: blur(1px);
+    
 }
 
 .home .image{
     width: 15rem;
     height: 15rem;
     margin: 1rem;
+   
     
 }
 
@@ -126,8 +100,8 @@ header nav a:hover{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius:50%;
-    border: .7rem solid #24ae60;
+    border: .5rem solid #1aa556;
+    border-radius:51%;
     
 }
 
@@ -149,7 +123,7 @@ header nav a:hover{
     width: 100vw;
     height: 100vh;
     padding: 3rem 1rem;
-    background-color: #fff;
+    background-color:rgb(231, 225, 225);
     z-index: 1000;
     
 }
@@ -166,6 +140,7 @@ header nav a:hover{
     width: 30rem;
     height: 25em;
     border: .7rem solid #24ae60;
+    display: none;
 }
 
 
@@ -182,9 +157,8 @@ header nav a:hover{
     padding: 1rem 2rem;
 }
 
-.about .details h1{
-    font-size: 3rem;
-    color: #24ae60;
+.about .details h2{
+    font-size: 2.4rem;
     text-transform: none;
 }
 
@@ -450,39 +424,8 @@ footer  .information a{
 }
 @media (max-width:768px){
 
-    #menubar{
-        display: block;
-        z-index: 1000;
-    }
-
-    .active{
-        left: 0;
-    }
-
-    header{
-        width: 100vw;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        left: -256rem;
-    }
-
-    header nav{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        writing-mode: horizontal-tb;
-    }
-
-    header nav a{
-        font-size: 2.5rem;
-    }
-    
-
     .home h1{
-        font-size: 2.7rem;
+        font-size: 2.2rem;
         margin-top: 2rem;
         margin-bottom: .6rem;
     }
@@ -517,12 +460,17 @@ footer  .information a{
     .about .details{
         padding: 0;
     }
+    
+    .about .details p{
+        width:100%;
+        text-indent: 1px;
+    }
     .about .details .box{
         padding: 0%;
         display: inline;
         
     }
-    .about .details .box.info{
+    .about .details .box .info{
         width: 100%;
     }
     .about .details .box .info p{
@@ -597,19 +545,13 @@ footer  .information a{
 }
 @media (max-width:510px){
 
-    #menubar{
-        display: block;
-        z-index: 1000;
-        padding: 1rem;
-        position: fixed;
-    }
-
+   
     .about .details{
         padding: 2rem 0;
     }
 
-    .about .details h1{
-        font-size: 2.2rem;
+    .about .details h2{
+        font-size: 2rem !important;
     }
     .about .details p{
         font-size: 1.6rem;
